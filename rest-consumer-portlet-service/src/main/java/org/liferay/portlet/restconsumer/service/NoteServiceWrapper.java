@@ -54,6 +54,11 @@ public class NoteServiceWrapper implements NoteService,
         _noteService.addNote(note);
     }
 
+    @Override
+    public com.liferay.portal.model.User getCurrentUser() {
+        return _noteService.getCurrentUser();
+    }
+
     /**
      * @deprecated As of 6.1.0, replaced by {@link #getWrappedService}
      */

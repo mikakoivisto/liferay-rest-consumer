@@ -2,6 +2,7 @@ package org.liferay.portlet.restconsumer.service.impl;
 
 import com.liferay.portal.kernel.log.Log;
 import com.liferay.portal.kernel.log.LogFactoryUtil;
+import com.liferay.portal.model.User;
 
 import java.util.List;
 
@@ -34,6 +35,11 @@ public class NoteServiceImpl extends NoteServiceBaseImpl {
 	
 	public void addNote(Note note) {
 		_log.info("Note added : " + note);
+	}
+	
+	
+	public User getCurrentUser() {
+		return getUser();
 	}
 	
 	private Log _log = LogFactoryUtil.getLog(NoteServiceImpl.class.getName());
